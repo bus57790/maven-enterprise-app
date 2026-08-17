@@ -32,7 +32,7 @@ pipeline {
 
         stage('SonarQube Analysis') {
             steps {
-                // Must match the SonarQube Server Name in Jenkins System settings profile
+                // Must match the SonarQube Server Name in Jenkins System settings
                 withSonarQubeEnv('SonarQubeServer') { 
                     sh 'mvn sonar:sonar'
                 }
