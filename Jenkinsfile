@@ -34,7 +34,7 @@ pipeline {
             steps {
                 // Must match the SonarQube Server Name in Jenkins System settings
                 withSonarQubeEnv('SonarQubeServer') { 
-                    sh 'mvn sonar:sonar'
+                    sh 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:sonar'
                 }
             }
         }
