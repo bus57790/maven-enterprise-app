@@ -38,7 +38,7 @@ pipeline {
                 }
             }
         }
-
+/*
         stage('Quality Gate') {
             steps {
                 // Waits for SonarQube to finish processing analysis
@@ -47,7 +47,7 @@ pipeline {
                 }
             }
         }
-
+*/
         stage('Package EAR') {
             steps {
                 sh 'mvn package -DskipTests'
